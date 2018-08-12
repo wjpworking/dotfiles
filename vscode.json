@@ -1,5 +1,4 @@
 {
-    "window.zoomLevel":  1.25,
     "editor.fontSize": 17,
     "editor.fontFamily":  "Source Code Pro",
     "editor.fontLigatures": true,
@@ -15,21 +14,16 @@
         120
     ],
     "terminal.integrated.fontSize": 15,
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "vscode-great-icons",
     "markdownlint.config": {
         "MD013": false,
         "MD029": false
     },
-    "workbench.colorTheme": "Spacemacs - dark",
-    "todohighlight.isEnable": true,
+    "workbench.colorTheme": "One Dark Pro",
     "python.autoComplete.addBrackets": true,
     "git.autofetch": true,
-    "cSpell.userWords": [
-        "getcwd",
-        "mongoengine",
-        "wechat",
-        "xlsx",
-        "yapf"
-    ],
-    "vsicons.projectDetection.autoReload": true
+    "vsicons.projectDetection.autoReload": true,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    }
 }
