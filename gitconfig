@@ -3,3 +3,6 @@
 	email = wjpworking@163.com
 [core]
 	editor = vim
+[core]
+	eol = lf
+	autocrlf = input
