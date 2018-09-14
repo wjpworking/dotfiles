@@ -1,8 +1,8 @@
 [user]
-	name = wjpworking
-	email = wjpworking@163.com
+	name = idwangmo
+	email = idwangmo@gmail.com
 [core]
-	editor = vim
+	editor = emacs
 [core]
 	eol = lf
 	autocrlf = input

@@ -13,22 +13,11 @@
 3. thefuck
 4. fzf
 5. docker
+6. Anaconda
 
 ## vim 配置
 
-在使用了[spf13](http://vim.spf13.com/)和[SpaceVim](http://spacevim.org/)的配置后，我认为一个轻便的vim配置才是适合我的。通过我使用一段时间后的感受来说，这两个vim的配置都是特别出色的，尤其是Spacevim的配置我特别喜欢。但是因为这两个配置支持的特性有点多，我目前还不能完全接受，所以我才写了一个适合我的版本的配置，当然也使其能完成我日常基本使用。
-
-### 附加工具
-
-对由于[YoucompleteMe](https://github.com/Valloric/YouCompleteMe)这个插件来说，其本身默认支持的Python是相当强的，但是我觉得他的C支持更好。使用这个插件的时候我建议升级本系统的Clang到最新，然后使用本地环境进行编译较好。
-
-并且使用c的补全的话需要使用`clang`进行编译，还需要`cmake`工具，所以在使用的时候需要在之前安装这两个工具，同时还需要`typescript`，`go`，`tern`这些语言环境来支持
-
-### vim-plug
-
-```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
+在使用了[spf13](http://vim.spf13.com/)和[SpaceVim](http://spacevim.org/)的配置后，我认为一个轻便的vim配置才是适合我的。通过我使用一段时间后的感受来说，这两个vim的配置都是特别出色的，尤其是Spacevim的配置我特别喜欢。但是因为这两个配置支持的特性有点多，我目前还不能完全接受，所以我才写了一个适合我的版本的配置，当然也使其能完成我日常基本使用。个人的Vim配置现在已经
 
 ## emacs 配置
 
@@ -37,4 +26,3 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 ## git配置
 
 一些基本的git配置
-
