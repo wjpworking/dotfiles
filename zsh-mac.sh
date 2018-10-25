@@ -49,7 +49,7 @@ export UPDATE_ZSH_DAYS=3
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -61,11 +61,6 @@ export UPDATE_ZSH_DAYS=3
 plugins=(
   git
   docker
-  git-extras
-  common-aliases
-  mvn
-  gradle
-  osx
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -75,7 +70,9 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -87,17 +84,36 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-# ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
-alias zshconfig="emacs -t ~/.zshrc"
-alias ohmyzsh="emacs -t ~/.oh-my-zsh"
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+alias zshconfig="emacs ~/.zshrc"
+alias ohmyzsh="emacs ~/.oh-my-zsh"
+alias source_zsh="source ~/.zshrc"
 
-# homebrew 清华源
+# keymap
+# brew
+alias brew_update='brew update || true && brew upgrade || true && brew cask upgrade || true && brew cleanup'
+
+# docker
+alias docker_kill='docker kill $(docker ps -a -q)'
+alias docker_clean_container='docker rm $(docker ps -a -q)'
+alias docker_clean_image='docker rmi $(docker images -q -f dangling=true)'
+alias docker_clean_all='dockercleanc || true && dockercleani || true && docker rmi -f $(docker images -q)'
+
+# brew config
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+
+# miniconda config
+export PATH=/usr/local/miniconda3/bin:"$PATH"
+
+# golang setting
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -106,29 +122,13 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bott
 eval $(thefuck --alias)
 eval $(thefuck --alias FUCK)
 
-# zsh completion
-fpath=(/usr/local/share/zsh-completions $fpath)
+# default editor
+export EDITOR="emacs"
 
-# zsh syntax
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# docker container
+alias mysql_server_5='docker run --name mysql -v ${HOME}/data/mysql:/var/lib/mysql -p 9001:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci'
+alias rabbitmq='docker run --name rabbitmq -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=root -p 5671:5671 -p 5672:5672  -p 15672:15672 -p 15671:15671  -p 25672:25672 -v ${HOME}/data/rabbitmq:/var/lib/rabbitmq -d rabbitmq:3-management'
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/usr/local/sbin:$PATH"
+# mysql config
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
-# 键位映射
-# brew
-alias brew_update='brew update || true && brew upgrade || true && brew cask upgrade'
-alias brew_clean='brew cleanup || true && brew cask cleanup'
-
-# docker
-alias dockerkill='docker kill $(docker ps -a -q)'
-alias dockercleanc='docker rm $(docker ps -a -q)'
-alias dockercleani='docker rmi $(docker images -q -f dangling=true)'
-alias dockercleanall='dockercleanc || true && dockercleani || true && docker rmi -f $(docker images -q)'
-
-# myconf
-source $HOME/.myconf
-
-# anaconda3
-export PATH=/usr/local/anaconda3/bin:"$PATH"
