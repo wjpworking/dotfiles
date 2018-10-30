@@ -1,8 +1,0 @@
-[user]
-	name = idwangmo
-	email = idwangmo@gmail.com
-[core]
-	editor = emacs
-[core]
-	eol = lf
-	autocrlf = input
