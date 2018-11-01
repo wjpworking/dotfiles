@@ -6,5 +6,8 @@
 ;; (package! another-package :recipe (:fetcher github :repo "username/repo"))
 ;; (package! builtin-package :disable t)
 
-(package! vue-mode)
 (package! org2ctex)
+(package! company-lsp)
+(package! lsp-mode)
+(package! company-quickhelp)
+(package! vimrc-mode)
