@@ -1,5 +1,8 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
+(setq-default
+ user-full-name 'idwangmo'
+ user-mail-address 'idwangmo@gmail.com')
 ;; font config
 (setq doom-font (font-spec :family "Hack" :size 15))
 
@@ -10,12 +13,9 @@
         company-show-numbers t)
   (add-hook! 'company-mode-hook 'company-quickhelp-mode))
 
-
 ;; 使用xelatex一步生成PDF，不是org-latex-to-pdf-process这个命令
 (setq org-latex-pdf-process
   '(
-    "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-    "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
     "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
     "rm -fr %b.out %b.log %b.tex auto"))
 
