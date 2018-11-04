@@ -43,6 +43,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 "" synatx
 Plug 'w0rp/ale'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 
 "" git
 Plug 'airblade/vim-gitgutter'
@@ -62,9 +64,10 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'junegunn/vim-easy-align'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ryanoasis/vim-devicons'
-
-"" language
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'luochen1990/rainbow'
+Plug 'hecal3/vim-leader-guide'
+Plug 'simnalamburt/vim-mundo'
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 
@@ -74,9 +77,37 @@ call plug#end()
 "" leader key
 let mapleader = "\<Space>"
 
+set number
+
 syntax on
+set ruler
+set number
+set mouse=a
+set hidden
+
 color dracula
 
+set cursorline
+
+"" file encoding
+set fileencoding=utf-8
+set fileencodings=utf-8
+set bomb
+set binary
+
+"" ignore warning bell
+set noerrorbells
+set novisualbell
+set t_vb=
+
+filetype indent plugin on
+
+"" Tab = 4
+set tabstop=4
+set shiftwidth=4
+set sta
+set et
+set sts=4
 
 "" *****************************
 "" keymap
@@ -87,6 +118,37 @@ noremap <Leader>op :NERDTreeToggle<CR>
 "" easy-align
 noremap <Leader>ea :EasyAlign<CR>
 
+"" lsp config
+nnoremap <Leader>ls :call LanguageClient_contextMenu()<CR>
+
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" Expands or completes the selected snippet/item in the popup menu
+imap <expr><silent><CR> pumvisible() ? deoplete#mappings#close_popup() .
+      \ "\<Plug>(neosnippet_jump_or_expand)" : "\<CR>"
+smap <silent><CR> <Plug>(neosnippet_jump_or_expand)
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
 
 
 "" *****************************
@@ -115,15 +177,27 @@ let g:airline#extensions#tabline#enabled = 1
 "" *****************************
 "" ale coanfig
 "" *****************************
+let g:ale_completion_enabled = 0
 let g:ale_fix_on_save = 1
 
+"" language linters
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'python': ['flake8']
+\}
+
 "" language fixer
-let g:ale_fixers = {'javascript': ['eslint'], 'python': ['flake8']}
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\   'python': ['yapf', 'isort']
+\}
 
 "" symbols
 let g:ale_sign_error='✖'
 let g:ale_sign_warning='➤'
 let g:ale_sign_info='Φ'
+
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 "" git info
 let g:airline#extensions#branch#enabled = 1
@@ -134,17 +208,31 @@ let g:airline#extensions#ale#enabled = 1
 "" font size
 let g:ale_list_window_size = 5
 
-
 "" *****************************
 "" deoplete config
 "" *****************************
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+
+"" auto close preview window
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
 call deoplete#custom#source('LanguageClient',
             \ 'min_pattern_length',
             \ 2)
 
+"" Disable the candidates in Comment/String syntaxes.
+call deoplete#custom#source('_',
+            \ 'disabled_syntaxes', ['Comment', 'String'])
+
 
 "" *****************************
-"" python config
+"" language server config
 "" *****************************
-let g:pymode_python = 'python3'
+let g:LanguageClient_serverCommands = {
+    \ 'python': ['/bin/pyls', '--log-file=/tmp/pyls.log'],
+    \ 'vue': ['vls']
+    \ }
+
+set completefunc=LanguageClient#complete
+set formatexpr=LanguageClient_textDocument_rangeFormatting()
