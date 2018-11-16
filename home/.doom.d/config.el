@@ -1,8 +1,5 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
-(setq-default
- user-full-name 'idwangmo'
- user-mail-address 'idwangmo@gmail.com')
 ;; font config
 (setq doom-font (font-spec :family "Hack" :size 15))
 
@@ -16,6 +13,8 @@
 ;; 使用xelatex一步生成PDF，不是org-latex-to-pdf-process这个命令
 (setq org-latex-pdf-process
   '(
+    "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+    "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
     "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
     "rm -fr %b.out %b.log %b.tex auto"))
 
@@ -31,3 +30,8 @@
 (def-package! vimrc-mode
   :init
   (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode)))
+
+(def-package! yapfify
+  :hook
+  (python-mode . yapf-mode)
+  (before-save . yapify-buffer))

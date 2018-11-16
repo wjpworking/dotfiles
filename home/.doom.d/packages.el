@@ -11,3 +11,5 @@
 (package! lsp-mode)
 (package! company-quickhelp)
 (package! vimrc-mode)
+(package! yapfify)
+(package! org-kanban)
