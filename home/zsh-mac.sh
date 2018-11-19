@@ -120,7 +120,7 @@ export EDITOR="emacs"
 alias mysql_server_5='docker run --name mysql -v ${HOME}/data/mysql:/var/lib/mysql -p 9001:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci'
 
 # doom config
-export PATH=$PATH:$HOME/.emacs.d/bin
+export PATH=$PATH:$HOME/.doom-emacs/bin
 
 # brew config
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
