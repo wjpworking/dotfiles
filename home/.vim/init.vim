@@ -57,6 +57,16 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
+"" markdown
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
+
+"" vim-orgmode
+Plug 'jceb/vim-orgmode'
+
+"" mustache
+Plug 'mustache/vim-mustache-handlebars'
+
 "" other
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
@@ -68,6 +78,7 @@ Plug 'luochen1990/rainbow'
 Plug 'hecal3/vim-leader-guide'
 Plug 'simnalamburt/vim-mundo'
 Plug 'majutsushi/tagbar'
+Plug 'hotoo/pangu.vim'
 
 call plug#end()
 
@@ -108,6 +119,8 @@ set shiftwidth=4
 set sta
 set et
 set sts=4
+
+set colorcolumn=80
 
 "" *****************************
 "" keymap
