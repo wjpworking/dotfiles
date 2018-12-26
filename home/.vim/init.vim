@@ -19,7 +19,8 @@ if !filereadable(vimplug_exists)
   endif
   echo "Installing Vim-plug"
   echo ""
-  silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github\
+  usercontent.com/junegunn/vim-plug/master/plug.vim
   let g:not_finish_vimplug = "yes"
 
   autocmd VimEnter * PlugInstall
@@ -73,7 +74,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'junegunn/vim-easy-align'
 Plug 'jiangmiao/auto-pairs'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'luochen1990/rainbow'
 Plug 'hecal3/vim-leader-guide'
 Plug 'simnalamburt/vim-mundo'
@@ -122,6 +123,8 @@ set sts=4
 
 set colorcolumn=80
 
+set clipboard=unnamed
+
 "" *****************************
 "" keymap
 "" *****************************
@@ -143,7 +146,7 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+    \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
 if has('conceal')
@@ -155,10 +158,12 @@ endif
 "" *****************************
 "" start
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) &&
+    \ !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 "" close
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
+    \ && b:NERDTree.isTabTree()) | q | endif
 
 "" symbols
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -181,15 +186,15 @@ let g:ale_fix_on_save = 1
 
 "" language linters
 let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'python': ['flake8']
-\}
+    \'javascript': ['eslint'],
+    \'python': ['flake8']
+    \}
 
 "" language fixer
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\   'python': ['yapf', 'isort']
-\}
+    \'javascript': ['eslint'],
+    \'python': ['yapf', 'isort']
+    \}
 
 "" symbols
 let g:ale_sign_error='✖'
@@ -216,13 +221,10 @@ let g:deoplete#enable_smart_case = 1
 "" auto close preview window
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
-call deoplete#custom#source('LanguageClient',
-            \ 'min_pattern_length',
-            \ 2)
+call deoplete#custom#source('LanguageClient', 'min_pattern_length', 2)
 
 "" Disable the candidates in Comment/String syntaxes.
-call deoplete#custom#source('_',
-            \ 'disabled_syntaxes', ['Comment', 'String'])
+call deoplete#custom#source('_', 'disabled_syntaxes', ['Comment', 'String'])
 
 
 "" *****************************
