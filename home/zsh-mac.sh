@@ -88,20 +88,24 @@ export ARCHFLAGS="-arch x86_64"
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
 alias zshconfig="emacs ~/.zshrc"
 alias ohmyzsh="emacs ~/.oh-my-zsh"
 alias source_zsh="source ~/.zshrc"
 
 # keymap
 # brew
-alias brew_update='brew update || true && brew upgrade || true && brew cask upgrade || true && brew cleanup'
+alias brew_update='brew update || true && brew upgrade || true && \
+    brew cask upgrade || true && brew cleanup'
 
 # docker
 alias docker_kill='docker kill $(docker ps -a -q)'
 alias docker_clean_container='docker rm $(docker ps -a -q)'
 alias docker_clean_image='docker rmi $(docker images -q -f dangling=true)'
-alias docker_clean_all='dockercleanc || true && dockercleani || true && docker rmi -f $(docker images -q)'
+alias docker_clean_all='dockercleanc || true && dockercleani || true && \
+    docker rmi -f $(docker images -q)'
+
+# other keymap
+alias nvim-config='nvim $HOME/.vim/init.vim'
 
 # miniconda config
 export PATH=/usr/local/miniconda3/bin:"$PATH"
@@ -115,9 +119,6 @@ eval $(thefuck --alias FUCK)
 
 # default editor
 export EDITOR="emacs"
-
-# docker container
-alias mysql_server_5='docker run --name mysql -v ${HOME}/data/mysql:/var/lib/mysql -p 9001:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci'
 
 # doom config
 export PATH=$PATH:$HOME/.doom-emacs/bin
@@ -136,3 +137,10 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # go config
 export PATH=$PATH:$HOME/go/bin
+
+# gpg key
+export GPG_TTY=$(tty)
+
+# llvm config
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+
