@@ -14,11 +14,8 @@
 (setq ns-use-proxy-icon  nil)
 (setq frame-title-format nil)
 
-;; Show matching parens
-(setq show-paren-delay 0)
-(show-paren-mode 1)
-
 ;; Disable backup files
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
 
+(provide 'init-core)
