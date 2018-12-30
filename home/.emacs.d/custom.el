@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (company company-mode doom-modeline evil doom-themes use-package))))
+    (lsp-java company-lsp lsp-ui lsp-mode markdown-mode pyim company evil doom-modeline doom-themes use-package))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
