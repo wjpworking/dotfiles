@@ -1,6 +1,3 @@
 [user]
 	email = idwangmo@gmail.com
 	name = idwangmo
-	signingkey = 2F4493B0C8D96A46
-[commit]
-	template = /Users/idwangmo/.gittemplate
