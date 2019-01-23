@@ -3,6 +3,9 @@
 这些是我在工作中使用时一些软件的配置文件，希望各位能在配置这些软件的时候进行参
 考。
 
+**在使用配置的时候尽量使用软链接的方式进行，而不是使用cp方式进行，这样可以较好的
+在同一个地方管理数据**
+
 ## zsh
 
 在日常使用中使用 zsh 作为默认的 shell 环境，使用 [oh-my-zsh](http://ohmyz.sh/) 
@@ -36,3 +39,10 @@
 
 修改文件`core/core-package.el`中的`package-archives`中的相关镜像配置为国内的镜
 像配置就行
+
+``` emacs-lisp
+'(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+  ("melpa" . "http://elpa.emacs-china.org/melpa/")
+  ("org"   . "http://elpa.emacs-china.org/org/"))
+```
+

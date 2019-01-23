@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # 在系统中安装并配置好brew后执行
 
+brew update
+
 brew install aria2 httpie git pipenv thefuck lua tldr \
     yarn mycli mysql-client fzf go htop bat redis \
     python
