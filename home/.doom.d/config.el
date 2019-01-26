@@ -6,6 +6,7 @@
 ;; company config
 (after! company
   (setq company-minimum-prefix-length 2
+        company-quickhelp-delay nil
         company-idle-delay 0.2
         company-show-numbers t)
   (add-hook! 'company-mode-hook 'company-quickhelp-mode))
