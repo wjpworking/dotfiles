@@ -72,8 +72,9 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+
+# pipenv lang config
 export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -90,25 +91,25 @@ export ARCHFLAGS="-arch x86_64"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 alias zshconfig="emacs ~/.zshrc"
 alias ohmyzsh="emacs ~/.oh-my-zsh"
-alias source_zsh="source ~/.zshrc"
+alias source-zsh="source ~/.zshrc"
 
 # keymap
 # brew
-alias brew_update='brew update || true && brew upgrade || true && \
+alias brew-update='brew update || true && brew upgrade || true && \
     brew cask upgrade || true && brew cleanup'
 
 # docker
-alias docker_kill='docker kill $(docker ps -a -q)'
-alias docker_clean_container='docker rm $(docker ps -a -q)'
-alias docker_clean_image='docker rmi $(docker images -q -f dangling=true)'
-alias docker_clean_all='dockercleanc || true && dockercleani || true && \
+alias docker-kill='docker kill $(docker ps -a -q)'
+alias docker-clean-container='docker rm $(docker ps -a -q)'
+alias docker-clean-image='docker rmi $(docker images -q -f dangling=true)'
+alias docker-clean-all='dockercleanc || true && dockercleani || true && \
     docker rmi -f $(docker images -q)'
 
 # other keymap
 alias nvim-config='nvim $HOME/.vim/init.vim'
 
 # miniconda config
-export PATH=/usr/local/miniconda3/bin:"$PATH"
+export PATH=/usr/local/miniconda3/bin:$PATH
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -121,7 +122,7 @@ eval $(thefuck --alias FUCK)
 export EDITOR="emacs"
 
 # doom config
-export PATH=$PATH:$HOME/.doom-emacs/bin
+export PATH=$PATH:$HOME/.emacs.d/bin
 
 # brew config
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
