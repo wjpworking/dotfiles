@@ -111,3 +111,6 @@ export PATH=$PATH:$HOME/.emacs.d/bin
 
 # yarn cofig
 export PATH=$PATH:$HOME/.yarn/bin
+
+# python local
+export PATH=$PATH:$HOME/.local/bin
