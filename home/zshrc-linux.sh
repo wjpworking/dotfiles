@@ -64,6 +64,7 @@ ZSH_THEME="ys"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  archlinux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -105,6 +106,8 @@ eval $(thefuck --alias FUCK)
 export CC=clang
 export CXX=clang++
 
-# fzf copnfig
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# doom emacs config
+export PATH=$PATH:$HOME/.emacs.d/bin
 
+# yarn cofig
+export PATH=$PATH:$HOME/.yarn/bin

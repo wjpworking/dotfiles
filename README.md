@@ -46,3 +46,9 @@
   ("org"   . "http://elpa.emacs-china.org/org/"))
 ```
 
+3. 解决使用`all-the-icons-font`文件为空的情况：
+  1. 到[all-the-icons.el](https://github.com/domtronn/all-the-icons.el)中将项目
+     下载下来
+  2. 将其`fonts`文件夹下到文件拷贝到`~/.local/share/fonts`文件夹下面
+  3. 执行`fc-cache -f -v`刷新字体缓存
+
