@@ -2,6 +2,7 @@
 
 ;; font config
 (setq doom-font (font-spec :family "Monospace" :size 15))
+(setq doom-theme 'doom-solarized-light)
 
 ;; company config
 (after! company
