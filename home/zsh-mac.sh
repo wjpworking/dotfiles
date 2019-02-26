@@ -125,7 +125,7 @@ export EDITOR="emacs"
 export PATH=$PATH:$HOME/.emacs.d/bin
 
 # brew config
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 # yarn config
 export PATH=$PATH:$HOME/.yarn/bin
