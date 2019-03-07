@@ -95,14 +95,14 @@ alias source-zsh="source ~/.zshrc"
 
 # keymap
 # brew
-alias brew-update='brew update || true && brew upgrade || true && \
-    brew cask upgrade || true && brew cleanup'
+alias brew-update='brew update | brew upgrade |
+    brew cask upgrade | brew cleanup'
 
 # docker
 alias docker-kill='docker kill $(docker ps -a -q)'
 alias docker-clean-container='docker rm $(docker ps -a -q)'
 alias docker-clean-image='docker rmi $(docker images -q -f dangling=true)'
-alias docker-clean-all='dockercleanc || true && dockercleani || true && \
+alias docker-clean-all='dockercleanc | dockercleani | \
     docker rmi -f $(docker images -q)'
 
 # other keymap

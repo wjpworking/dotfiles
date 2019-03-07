@@ -7,3 +7,4 @@
 ;; (package! builtin-package :disable t)
 
 (package! company-quickhelp)
+(package! lsp-python :ignore t)
