@@ -126,11 +126,9 @@ export PATH=$PATH:$HOME/.emacs.d/bin
 
 # brew config
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+export PATH="/usr/local/sbin:$PATH"
 
-# yarn config
-export PATH=$PATH:$HOME/.yarn/bin
-
-# mysql config
+# MYSQL config
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
 # sqlite3 config
