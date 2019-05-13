@@ -97,20 +97,17 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 alias zshconfig="emacs ~/.zshrc"
 alias ohmyzsh="emacs ~/.oh-my-zsh"
 alias source-zsh="source ~/.zshrc"
-
-# the fuck
-eval $(thefuck --alias)
-eval $(thefuck --alias FUCK)
+alias ps4="proxychains4"
 
 # c compile flags
 export CC=clang
 export CXX=clang++
 
 # doom emacs config
-export PATH=$PATH:$HOME/.emacs.d/bin
+export PATH="$PATH:$HOME/.emacs.d/bin"
 
 # yarn cofig
-export PATH=$PATH:$HOME/.yarn/bin
+export PATH="$PATH:$HOME/.yarn/bin"
 
 # python local
-export PATH=$PATH:$HOME/.local/bin
+export PATH="$PATH:$HOME/.local/bin"
