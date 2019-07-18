@@ -41,9 +41,9 @@
 像配置就行
 
 ``` emacs-lisp
-'(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+`(("gnu"   . "http://elpa.emacs-china.org/gnu/")
   ("melpa" . "http://elpa.emacs-china.org/melpa/")
-  ("org"   . "http://elpa.emacs-china.org/org/"))
+  ("org"   . "http://elpa.emacs-china.org/org/")))
 ```
 
 3. 解决使用`all-the-icons-font`文件为空的情况：
