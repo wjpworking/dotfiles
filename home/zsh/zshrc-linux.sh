@@ -104,3 +104,6 @@ export PATH="$PATH:$HOME/.emacs.d/bin"
 
 # yarn config
 export PATH="$PATH:$HOME/.yarn/bin"
+
+# rust config
+export PATH="$PATH:$HOME/.cargo/bin"
