@@ -8,7 +8,7 @@
 
 ## zsh
 
-在日常使用中使用 zsh 作为默认的 shell 环境，使用 [oh-my-zsh](http://ohmyz.sh/) 
+在日常使用中使用 zsh 作为默认的 shell 环境，使用 [oh-my-zsh](http://ohmyz.sh/)
 作为日常的的 zsh 的配置
 
 
@@ -30,9 +30,9 @@
 
 将位于`core/core.el`中的以下两行进行注释后解决：
 
-``` emacs-lisp
+``` lisp
 (when (fboundp 'set-charset-priority)
-  (set-charset-priority 'unicode))     ; pretty
+  (set-charset-priority 'unicode))
 ```
 
 2. 使用国内的镜像：
@@ -40,10 +40,10 @@
 修改文件`core/core-package.el`中的`package-archives`中的相关镜像配置为国内的镜
 像配置就行
 
-``` emacs-lisp
+``` lisp
 `(("gnu"   . "http://elpa.emacs-china.org/gnu/")
   ("melpa" . "http://elpa.emacs-china.org/melpa/")
-  ("org"   . "http://elpa.emacs-china.org/org/")))
+  ("org"   . "http://elpa.emacs-china.org/org/"))
 ```
 
 3. 解决使用`all-the-icons-font`文件为空的情况：

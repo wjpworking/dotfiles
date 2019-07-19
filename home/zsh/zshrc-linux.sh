@@ -107,3 +107,5 @@ export PATH="$PATH:$HOME/.yarn/bin"
 
 # rust config
 export PATH="$PATH:$HOME/.cargo/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
