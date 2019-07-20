@@ -123,6 +123,15 @@ if has('mac')
 endif
 
 " *****************************
+" ncm2 config
+" *****************************
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>": "\<CR>")
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+
+" *****************************
 " vim ariline config
 " *****************************
 let g:airline#extensions#tabline#enabled = 1
@@ -207,11 +216,3 @@ nmap <Leader>mpd <Plug>MarkdownPreviewStop<CR>
 " *****************************
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
-" *****************************
-" ncm2 config
-" *****************************
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
