@@ -98,6 +98,7 @@ export ARCHFLAGS="-arch x86_64"
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias sourcezsh="source ~/.zshrc"
+alias nvimconfig='nvim ~/.config/nvim/init.vim'
 
 # emacs config
 export PATH="$PATH:$HOME/.emacs.d/bin"
@@ -108,4 +109,5 @@ export PATH="$PATH:$HOME/.yarn/bin"
 # rust config
 export PATH="$PATH:$HOME/.cargo/bin"
 
+# fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -1,3 +1,9 @@
+# visual studio code
 .vscode/
+
+# mac
 .DS_Store
+
+# neovim
 home/nvim/autoload/plug.vim
+home/nvim/plugged/

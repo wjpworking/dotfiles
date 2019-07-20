@@ -10,6 +10,77 @@
 " | | | |  __/ (_) \ V /| | | | | | |
 " |_| |_|\___|\___/ \_/ |_|_| |_| |_|
 "                                    
+
+" *****************************
+" vim-plug settig
+" *****************************
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+    echo "Installing Vim-plug"
+    echo ""
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+call plug#begin('~/.config/nvim/plugged')
+
+" align
+Plug 'junegunn/vim-easy-align'
+
+" synatx lint
+Plug 'w0rp/ale'
+
+" theme
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+" comment
+Plug 'scrooloose/nerdcommenter'
+
+" auto pair
+"Plug 'jiangmiao/auto-pairs'
+
+" fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" indent
+Plug 'Yggdroot/indentLine'
+
+" windows
+Plug 'scrooloose/nerdtree'
+Plug 'easymotion/vim-easymotion'
+
+" snippet
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+" undo tree
+Plug 'simnalamburt/vim-mundo'
+
+" git
+Plug 'airblade/vim-gitgutter'
+Plug 'rhysd/git-messenger.vim'
+
+" markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
+" ncm2
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+
+" Other
+Plug 'luochen1990/rainbow'
+Plug 'hecal3/vim-leader-guide'
+Plug 'liuchengxu/vim-which-key'
+
+call plug#end()
+
+" *****************************
+" neovim base config
+" *****************************
 filetype plugin indent on         " Load plugins according to detected filetype.
 syntax on                         " Enable syntax highlighting.
 
@@ -44,69 +115,12 @@ set wrap                          " auto wrap line
 set list                          " Show non-printabe characters.
 set smartcase                     " auto cast case
 let mapleader="\<Space>"          " leader key
+color dracula                     " neovim color theme setting
 
 " mac backsoace setting
 if has('mac')
     set backspace=2
 endif
-
-" *****************************
-" vim-plug settig
-" *****************************
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-    echo "Installing Vim-plug"
-    echo ""
-    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
-
-call plug#begin('~/.vim/plugged')
-
-" align
-Plug 'junegunn/vim-easy-align'
-
-" synatx lint
-Plug 'w0rp/ale'
-
-" vim airline
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" comment
-Plug 'scrooloose/nerdcommenter'
-
-" auto pair
-"Plug 'jiangmiao/auto-pairs'
-
-" fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-" indent
-Plug 'Yggdroot/indentLine'
-
-" windows
-Plug 'scrooloose/nerdtree'
-Plug 'easymotion/vim-easymotion'
-
-" snippet
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-" undo tree
-Plug 'simnalamburt/vim-mundo'
-
-" git
-Plug 'airblade/vim-gitgutter'
-Plug 'rhysd/git-messenger.vim'
-
-" markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-
-" Other
-Plug 'luochen1990/rainbow'
-Plug 'hecal3/vim-leader-guide'
-call plug#end()
 
 " *****************************
 " vim ariline config
@@ -187,3 +201,17 @@ nmap <Leader>gm <Plug>(git-messenger)
 " *****************************
 nmap <Leader>mp <Plug>MarkdownPreview
 nmap <Leader>mpd <Plug>MarkdownPreviewStop<CR>
+
+" *****************************
+" vim witch key config
+" *****************************
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
+" *****************************
+" ncm2 config
+" *****************************
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
