@@ -64,6 +64,7 @@ Plug 'rhysd/git-messenger.vim'
 
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'dhruvasagar/vim-table-mode'
 
 " ncm2
 Plug 'ncm2/ncm2'
@@ -75,6 +76,7 @@ Plug 'ncm2/ncm2-path'
 Plug 'luochen1990/rainbow'
 Plug 'hecal3/vim-leader-guide'
 Plug 'liuchengxu/vim-which-key'
+Plug 'hotoo/pangu.vim'
 
 call plug#end()
 
@@ -146,6 +148,7 @@ let g:ale_fixers = {
 
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
+let g:ale_sign_column_always = 1
 let g:airline#extensions#ale#enabled = 1
 
 " symbols
@@ -216,3 +219,7 @@ nmap <Leader>mpd <Plug>MarkdownPreviewStop<CR>
 " *****************************
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
+" *****************************
+" pangu config
+" *****************************
+autocmd BufWritePre *.markdown,*.md,*.text,*.txt,*.wiki,*.cnx call PanGuSpacing()
