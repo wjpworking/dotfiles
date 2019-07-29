@@ -77,6 +77,11 @@ Plug 'luochen1990/rainbow'
 Plug 'hecal3/vim-leader-guide'
 Plug 'liuchengxu/vim-which-key'
 Plug 'hotoo/pangu.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'wakatime/vim-wakatime'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'rhysd/vim-grammarous'
 
 call plug#end()
 
