@@ -18,7 +18,7 @@
 
 ## 字体
 
-现在因为是中英文一起进行开发，所以使用[更纱黑体](https://github.com/be5invis/Sarasa-Gothic)作为日常开发使用的字体。
+现在因为是中英文一起进行开发，所以使用[更纱黑体](https://github.com/be5invis/Sarasa-Gothic) 作为日常开发使用的字体。
 
 ## emacs 配置
 
@@ -49,8 +49,11 @@
 ```
 
 3. 解决使用`all-the-icons-font`文件为空的情况：
-    1. 到[all-the-icons.el](https://github.com/domtronn/all-the-icons.el)中将项目
+    1. 到 [all-the-icons.el](https://github.com/domtronn/all-the-icons.el) 中将项目
      下载下来
     2. 将其`fonts`文件夹下到文件拷贝到`~/.local/share/fonts`文件夹下面
     3. 执行`fc-cache -f -v`刷新字体缓存
 
+## 工具集
+
+使用 [exa](https://github.com/ogham/exa) 替换原有的`ls`命令

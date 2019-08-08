@@ -99,6 +99,8 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias sourcezsh="source ~/.zshrc"
 alias nvimconfig='nvim ~/.config/nvim/init.vim'
+alias dotfiles='nvim ~/.dotfiles'
+alias ls='exa'
 
 # emacs config
 export PATH="$PATH:$HOME/.emacs.d/bin"
