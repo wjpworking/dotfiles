@@ -33,6 +33,7 @@ Plug 'w0rp/ale'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'edkolev/tmuxline.vim'
 
 " comment
 Plug 'scrooloose/nerdcommenter'
