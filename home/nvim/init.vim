@@ -38,9 +38,6 @@ Plug 'edkolev/tmuxline.vim'
 " comment
 Plug 'scrooloose/nerdcommenter'
 
-" auto pair
-"Plug 'jiangmiao/auto-pairs'
-
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -66,7 +63,6 @@ Plug 'rhysd/git-messenger.vim'
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'plasticboy/vim-markdown'
 
 " ncm2
 Plug 'ncm2/ncm2'
@@ -79,7 +75,8 @@ Plug 'luochen1990/rainbow'
 Plug 'hecal3/vim-leader-guide'
 Plug 'liuchengxu/vim-which-key'
 Plug 'hotoo/pangu.vim'
-Plug 'editorconfig/editorconfig-vim'
+" Plug 'editorconfig/editorconfig-vim'
+Plug 'sgur/vim-editorconfig'
 Plug 'wakatime/vim-wakatime'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ryanoasis/vim-devicons'
