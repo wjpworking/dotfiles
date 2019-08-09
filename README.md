@@ -56,4 +56,6 @@
 
 ## 工具集
 
-使用 [exa](https://github.com/ogham/exa) 替换原有的`ls`命令
+* 使用 [exa](https://github.com/ogham/exa) 替换原有的`ls`命令
+* 使用 [bat](https://github.com/sharkdp/bat) 替换原有的`cat`命令
+

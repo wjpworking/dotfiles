@@ -100,7 +100,11 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias sourcezsh="source ~/.zshrc"
 alias nvimconfig='nvim ~/.config/nvim/init.vim'
 alias dotfiles='nvim ~/.dotfiles'
-alias ls='exa'
+alias ls="exa"
+alias cat="bat"
+
+# local config
+export PATH="$PATH:%HOME/.local/bin"
 
 # emacs config
 export PATH="$PATH:$HOME/.emacs.d/bin"
