@@ -6,25 +6,20 @@
 
 ## zsh
 
-在日常使用中使用 zsh 作为默认的 shell 环境，使用 [oh-my-zsh](http://ohmyz.sh/)
-作为日常的的 zsh 的配置
+在日常使用中使用 zsh 作为默认的 shell 环境，使用 [oh-my-zsh](http://ohmyz.sh/) 作为日常的的`zsh`的配置
 
 
 ## vim 配置
 
-这个配置使用了 [LSP](https://github.com/Microsoft/language-server-protocol/) 作
-为补全后端，不再使用以前我用的 [YCM](https://valloric.github.io/YouCompleteMe/)
-做为补全后端，并重写了一些配置。
+这个配置使用了 [LSP](https://github.com/Microsoft/language-server-protocol/) 作为补全后端，不再使用以前我用的 [YCM](https://valloric.github.io/YouCompleteMe/) 做为补全后端，并重写了一些配置。
 
 ## 字体
 
-现在因为是中英文一起进行开发，所以使用[更纱黑体](https://github.com/be5invis/Sarasa-Gothic) 作为日常开发使用的字体。
+现在因为是中英文一起进行开发，所以使用 [更纱黑体](https://githom/be5invis/Sarasa-Gothic) 作为日常开发使用的字体。
 
 ## emacs 配置
 
-现在使用`org-mode`作为日常工作中的笔记、GTD 以及日志管理，所以我开始使用起 emacs 来，
-在以前我使用过 [Spacemacs](http://spacemacs.org/)，但是目前我在转向使用
-[doom-emacs](https://github.com/hlissner/doom-emacs) 来作为日常使用的 emacs 配置。
+现在使用`org-mode`作为日常工作中的笔记、GTD 以及日志管理，所以我开始使用起 emacs 来，在以前我使用过 [Spacemacs](http://spacemacs.org/)，但是目前我在转向使用 [doom-emacs](https://github.com/hlissner/doom-emacs) 来作为日常使用的 emacs 配置。
 
 这其中有两个问题需要进行解决：
 
@@ -58,4 +53,4 @@
 
 * 使用 [exa](https://github.com/ogham/exa) 替换原有的`ls`命令
 * 使用 [bat](https://github.com/sharkdp/bat) 替换原有的`cat`命令
-
+* 使用 [lazygit](https://github.com/jesseduffield/lazygit) 和 [tips](https://github.com/jonas/tig) 一起替换原有命令行中`git`操作
