@@ -1,5 +1,7 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
+;; Place your private configuration here
+
 ;; font config
 (setq doom-font (font-spec :family "Monospace" :size 15))
 (setq doom-theme 'doom-solarized-light)
