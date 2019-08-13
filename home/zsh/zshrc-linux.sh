@@ -69,7 +69,14 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-         ubuntu)
+         z
+         extract
+         ubuntu
+         archlinux
+         zsh-syntax-highlighting
+         colored-man-pages
+         docker
+         zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,7 +108,6 @@ alias sourcezsh="source ~/.zshrc"
 alias nvimconfig='nvim ~/.config/nvim/init.vim'
 alias dotfiles='nvim ~/.dotfiles'
 alias ls="exa"
-alias cat="bat"
 
 # local config
 export PATH="$PATH:%HOME/.local/bin"
@@ -117,3 +123,4 @@ export PATH="$PATH:$HOME/.cargo/bin"
 
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
