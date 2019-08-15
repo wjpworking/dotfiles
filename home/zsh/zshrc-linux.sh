@@ -110,7 +110,7 @@ alias dotfiles='nvim ~/.dotfiles'
 alias ls="exa"
 
 # local config
-export PATH="$PATH:%HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # emacs config
 export PATH="$PATH:$HOME/.emacs.d/bin"
