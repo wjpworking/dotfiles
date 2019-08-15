@@ -5,5 +5,4 @@
 ;; (package! some-package)
 ;; (package! another-package :recipe (:fetcher github :repo "username/repo"))
 ;; (package! builtin-package :disable t)
-(package! company-quickhelp)
-(package! lsp-python :ignore t)
+(package! grip-mode :recipe (:fetcher github :repo "seagle0128/grip-mode"))
