@@ -15,6 +15,7 @@
 (require 'init-ui)
 
 ;; emacs 系统本身设置
+
 (require 'init-evil)
 (require 'init-company)
 (require 'init-projectile)

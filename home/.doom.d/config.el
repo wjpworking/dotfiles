@@ -10,8 +10,6 @@
 (setq doom-theme 'doom-solarized-light)
 
 ;; markdown
-(remove-hook! 'markdown-mode-hook #'auto-fill-mode)
-
 (def-package! grip-mode
   :bind (:map markdown-mode-command-map
           ("g" . grip-mode)))
