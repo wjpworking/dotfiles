@@ -19,7 +19,7 @@
 
 ## 字体
 
-现在因为是中英文一起进行开发，所以使用 [更纱黑体](https://githom/be5invis/Sarasa-Gothic) 作为日常开发使用的字体。
+现在因为是中英文一起进行开发，所以使用 [更纱黑体](https://github.com/be5invis/Sarasa-Gothic) 作为日常开发使用的字体。
 
 ## emacs 配置
 
