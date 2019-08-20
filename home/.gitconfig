@@ -1,3 +1,5 @@
 [user]
-	email = idwangmo@gmail.com
-	name = idwangmo
+    email = idwangmo@gmail.com
+    name = idwangmo
+[commit]
+    template = /home/idwangmo/.gittemplate
