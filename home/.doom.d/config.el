@@ -6,10 +6,9 @@
       user-mail-address "idwangmo@gmail.com")
 
 ;; font config
-(setq doom-font (font-spec :family "Monospace" :size 17))
+(setq doom-font (font-spec :family "Sarasa Mono SC" :size 18 :weight 'normal))
 (setq doom-theme 'doom-solarized-light)
 
 ;; markdown
 (def-package! grip-mode
-  :bind (:map markdown-mode-command-map
-          ("g" . grip-mode)))
+  :hook ((markdown-mode org-mode) . grip-mode))

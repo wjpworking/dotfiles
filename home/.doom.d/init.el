@@ -7,7 +7,7 @@
 ;;
 ;; More information about these modules (and what flags they support) can be
 ;; found in modules/README.org.
-(setq package-archives 
+(setq package-archives
         '(("melpa" . "http://elpa.emacs-china.org/melpa/")
           ("org"   . "http://elpa.emacs-china.org/org/")
           ("gnu"   . "http://elpa.emacs-china.org/gnu/")))
@@ -114,7 +114,7 @@
        emacs-lisp        ; drown in parentheses
        ;;ess               ; emacs speaks statistics
        ;;fsharp           ; ML stands for Microsoft's Language
-       ;;go                ; the hipster dialect
+       go                ; the hipster dialect
        ;;(haskell +intero) ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ;
