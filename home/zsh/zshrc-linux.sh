@@ -124,3 +124,9 @@ export PATH="$PATH:$HOME/.cargo/bin"
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# go config
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# golangx proxy
+export GOPROXY=https://goproxy.io
