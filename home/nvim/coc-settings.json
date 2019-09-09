@@ -1,0 +1,8 @@
+{
+    "languageserver": {
+        "efm": {
+            "command": "efm-langserver",
+            "filetypes": ["vim", "eruby", "markdown", "yaml"]
+        }
+    }
+}

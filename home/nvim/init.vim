@@ -19,6 +19,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     echo ""
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.config/nvim/plugged')
@@ -27,7 +28,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/vim-easy-align'
 
 " synatx lint
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 
 " theme
 Plug 'bling/vim-airline'
@@ -63,25 +64,26 @@ Plug 'rhysd/git-messenger.vim'
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'dhruvasagar/vim-table-mode'
+" Plug 'godlygeek/tabular'
+" Plug 'plasticboy/vim-markdown'
+Plug 'tpope/vim-markdown'
 
-" ncm2
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-tern',  {'do': 'yarn'}
+" coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Other
 Plug 'luochen1990/rainbow'
 Plug 'hecal3/vim-leader-guide'
 Plug 'liuchengxu/vim-which-key'
 Plug 'hotoo/pangu.vim'
-" Plug 'editorconfig/editorconfig-vim'
 Plug 'sgur/vim-editorconfig'
 Plug 'wakatime/vim-wakatime'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'rhysd/vim-grammarous'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 call plug#end()
 
@@ -130,15 +132,6 @@ if has('mac')
 endif
 
 " *****************************
-" ncm2 config
-" *****************************
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>": "\<CR>")
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
-
-" *****************************
 " vim ariline config
 " *****************************
 let g:airline#extensions#tabline#enabled = 1
@@ -146,29 +139,29 @@ let g:airline#extensions#tabline#enabled = 1
 " *****************************
 " ale config
 " *****************************
-let g:ale_linters =  {'javascript': ['eslint']}
-let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\}
+" let g:ale_linters =  {'javascript': ['eslint']}
+" let g:ale_fixers = {
+" \   'javascript': ['eslint'],
+" \}
 
-let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 1
-let g:ale_sign_column_always = 1
-let g:airline#extensions#ale#enabled = 1
+" let g:ale_fix_on_save = 1
+" let g:ale_completion_enabled = 1
+" let g:ale_sign_column_always = 1
+" let g:airline#extensions#ale#enabled = 1
 
-" symbols
-let g:ale_sign_error='✖'
-let g:ale_sign_warning='➤'
-let g:ale_sign_info='Φ'
+" " symbols
+" let g:ale_sign_error='E'
+" let g:ale_sign_warning='W'
+" let g:ale_sign_info='I'
 
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
-" git info
-let g:airline#extensions#branch#enabled = 1
+" " git info
+" let g:airline#extensions#branch#enabled = 1
 
-" keymap
-nmap <silent> <Leader>ap <Plug>(ale_previous_wrap)
-nmap <silent> <Leader>an <Plug>(ale_next_wrap)
+" " keymap
+" nmap <silent> <Leader>ap <Plug>(ale_previous_wrap)
+" nmap <silent> <Leader>an <Plug>(ale_next_wrap)
 
 " *****************************
 " easy align config
@@ -218,6 +211,7 @@ nmap <Leader>gm <Plug>(git-messenger)
 " *****************************
 nmap <Leader>mp <Plug>MarkdownPreview
 nmap <Leader>mpd <Plug>MarkdownPreviewStop<CR>
+" let g:vim_markdown_folding_disabled = 1
 
 " *****************************
 " vim witch key config
@@ -227,4 +221,29 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 " *****************************
 " pangu config
 " *****************************
-autocmd BufWritePre *.markdown,*.md,*.text,*.txt,*.wiki,*.cnx call PanGuSpacing()
+autocmd BufWritePre text,*.txt,*.wiki,*.cnx call PanGuSpacing()
+
+" *****************************
+" coc config
+" *****************************
+let g:coc_global_extensions = ['coc-python', 'coc-dictionary']
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
+" *****************************
+" prettier config
+" *****************************
+nmap <Leader>pr <Plug>(Prettier)
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+
+let g:markdown_fenced_languages = ['css', 'js=javascript']

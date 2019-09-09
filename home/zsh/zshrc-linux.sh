@@ -71,12 +71,9 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(git
          z
          extract
-         ubuntu
          archlinux
-         zsh-syntax-highlighting
          colored-man-pages
-         docker
-         zsh-autosuggestions)
+         docker)
 
 source $ZSH/oh-my-zsh.sh
 
