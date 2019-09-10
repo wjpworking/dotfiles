@@ -64,17 +64,14 @@ Plug 'rhysd/git-messenger.vim'
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'dhruvasagar/vim-table-mode'
-" Plug 'godlygeek/tabular'
-" Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-markdown'
+Plug 'dkarter/bullets.vim'
 
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Other
 Plug 'luochen1990/rainbow'
-Plug 'hecal3/vim-leader-guide'
-Plug 'liuchengxu/vim-which-key'
 Plug 'hotoo/pangu.vim'
 Plug 'sgur/vim-editorconfig'
 Plug 'wakatime/vim-wakatime'
@@ -84,6 +81,8 @@ Plug 'rhysd/vim-grammarous'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'godlygeek/tabular'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -186,8 +185,8 @@ map <Leader>op :NERDTreeToggle<CR>
 " *****************************
 " easymotion config
 " *****************************
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
+map  <Leader>e <Plug>(easymotion-sn)
+omap <Leader>e <Plug>(easymotion-tn)
 
 " *****************************
 " ultisnips
@@ -210,13 +209,13 @@ nmap <Leader>gm <Plug>(git-messenger)
 " markdown config
 " *****************************
 nmap <Leader>mp <Plug>MarkdownPreview
-nmap <Leader>mpd <Plug>MarkdownPreviewStop<CR>
-" let g:vim_markdown_folding_disabled = 1
+nmap <Leader>md <Plug>MarkdownPreviewStop<CR>
+let g:markdown_fenced_languages = ['css', 'js=javascript']
 
 " *****************************
 " vim witch key config
 " *****************************
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+" nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " *****************************
 " pangu config
@@ -245,5 +244,9 @@ nmap <Leader>pr <Plug>(Prettier)
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
+" *****************************
+" other config
+" *****************************
+" Open a terminal window
+map <LEADER>sh :set splitbelow<CR>:sp<CR>:term<CR>
 
-let g:markdown_fenced_languages = ['css', 'js=javascript']
