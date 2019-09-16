@@ -73,6 +73,7 @@ plugins=(git
          extract
          archlinux
          colored-man-pages
+         cargo
          docker)
 
 source $ZSH/oh-my-zsh.sh
@@ -127,3 +128,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # golangx proxy
 export GOPROXY=https://goproxy.io
+
+# cargo config
+export PATH=$PATH:$HOME/.cargo/bin
