@@ -13,10 +13,11 @@ Options:
     -v                convert video
     -a                convert audio
 """
-from docopt import docopt
 import os
-import ffmpeg
 import shutil
+
+import ffmpeg
+from docopt import docopt
 
 video_ext = [
     '.mp4', '.m4v', '.mkv', '.webm', '.mov', '.avi', '.wmv', '.mpg', '.flv',
