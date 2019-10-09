@@ -76,7 +76,6 @@ Plug 'hotoo/pangu.vim'
 Plug 'sgur/vim-editorconfig'
 Plug 'wakatime/vim-wakatime'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'rhysd/vim-grammarous'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',

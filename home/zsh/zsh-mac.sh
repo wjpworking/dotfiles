@@ -68,8 +68,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
-	 osx)
+plugins=(git osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,15 +93,21 @@ export ARCHFLAGS="-arch x86_64"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias sourcezsh="source ~/.zshrc"
 alias anniex="annie -x http://127.0.0.1:7890"
+alias ls="exa"
+alias nvimconfig="nvim ~/.dotfiles/home/nvim/init.vim"
 
 # homebrew config
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 export PATH="/usr/local/sbin:$PATH"
 
 # doom emacs config
 export PATH="$PATH:$HOME/.emacs.d/bin"
+
+# fzf config
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
