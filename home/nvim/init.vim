@@ -74,7 +74,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'luochen1990/rainbow'
 Plug 'hotoo/pangu.vim'
 Plug 'sgur/vim-editorconfig'
-Plug 'wakatime/vim-wakatime'
+" Plug 'wakatime/vim-wakatime'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rhysd/vim-grammarous'
 Plug 'prettier/vim-prettier', {
@@ -219,7 +219,7 @@ let g:markdown_fenced_languages = ['css', 'js=javascript']
 " *****************************
 " pangu config
 " *****************************
-autocmd BufWritePre text,*.txt,*.wiki,*.cnx call PanGuSpacing()
+autocmd BufWritePre text,*.wiki,*.cnx call PanGuSpacing()
 
 " *****************************
 " coc config
@@ -249,3 +249,4 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 " Open a terminal window
 map <LEADER>sh :set splitbelow<CR>:sp<CR>:term<CR>
 
+nmap <Leader>bn :bNext<CR>
