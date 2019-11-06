@@ -132,3 +132,5 @@ export GOPROXY=https://goproxy.io
 # cargo config
 export PATH=$PATH:$HOME/.cargo/bin
 
+export NVS_HOME="$HOME/.nvs"
+[ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
