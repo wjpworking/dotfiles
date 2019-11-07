@@ -83,6 +83,8 @@ Plug 'prettier/vim-prettier', {
 Plug 'godlygeek/tabular'
 Plug 'mhinz/vim-startify'
 Plug 'kristijanhusak/vim-carbon-now-sh'
+Plug 'tpope/vim-surround'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
@@ -123,7 +125,7 @@ set wrap                          " auto wrap line
 set list                          " Show non-printabe characters.
 set smartcase                     " auto cast case
 let mapleader="\<Space>"          " leader key
-color dracula                     " neovim color theme setting
+color onedark                     " neovim color theme setting
 
 " mac backsoace setting
 if has('mac')
@@ -134,6 +136,7 @@ endif
 " vim ariline config
 " *****************************
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='onedark'
 
 " *****************************
 " ale config
@@ -250,6 +253,7 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 " Open a terminal window
 map <LEADER>sh :set splitbelow<CR>:sp<CR>:term<CR>
 nmap <Leader>bn :bNext<CR>
+let g:onedark_terminal_italics = 1
 
 " *****************************
 " carbon setting

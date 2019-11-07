@@ -6,11 +6,11 @@
 
 ## zsh
 
-在日常使用中使用 zsh 作为默认的 shell 环境，使用 [oh-my-zsh](http://ohmyz.sh/)作为日常的的`zsh`的配置
+在日常使用中使用 zsh 作为默认的 shell 环境，使用 [oh-my-zsh](http://ohmyz.sh/) 作为日常的的`zsh`的配置
 
 ## vim 配置
 
-这个配置使用了 [LSP](https://github.com/Microsoft/language-server-protocol/) 作为补全后端，不再使用以前我用的 [YCM](https://valloric.github.io/YouCompleteMe/)做为补全后端，并重写了一些配置。
+这个配置使用了 [LSP](https://github.com/Microsoft/language-server-protocol/) 作为补全后端，不再使用以前我用的 [YCM](https://valloric.github.io/YouCompleteMe/) 做为补全后端，并重写了一些配置。
 
 ## 字体
 
@@ -38,12 +38,13 @@
 
 ## 工具集
 
--   使用[exa](https://github.com/ogham/exa) 替换原有的`ls`命令
--   使用[bat](https://github.com/sharkdp/bat) 替换原有的`cat`命令
--   使用[lazygit](https://github.com/jesseduffield/lazygit) 和[tips](https://github.com/jonas/tig) 一起替换原有命令行中`git`操作
--   利用[cz-cli](https://github.com/commitizen/cz-cli)来规范`Git`的提交
--   使用[nvs](https://github.com/jasongin/nvs)来管理`Node.js`的版本
--   使用[lazygit](https://github.com/jesseduffield/lazygit) 和[tips](https://github.com/jonas/tig) 一起替换原有命令行中`git`操作
+-   使用 [exa](https://github.com/ogham/exa) 替换原有的`ls`命令
+-   使用 [bat](https://github.com/sharkdp/bat) 替换原有的`cat`命令
+-   使用 [lazygit](https://github.com/jesseduffield/lazygit) 和 [tips](https://github.com/jonas/tig) 一起替换原有命令行中`git`操作
+-   利用 [cz-cli](https://github.com/commitizen/cz-cli) 来规范`Git`的提交
+-   使用 [nvs](https://github.com/jasongin/nvs) 来管理`Node.js`的版本
+-   使用 [lazygit](https://github.com/jesseduffield/lazygit) 和 [tips](https://github.com/jonas/tig) 一起替换原有命令行中`git`操作
+-   使用[ack](https://beyondgrep.com/)来进行文件夹下正文搜索，比`grep`友好
 
 ## 一些工具的安装
 
@@ -51,4 +52,18 @@
 
 ```bash
 go get github.com/mattn/efm-langserver
+```
+
+### Git cz
+
+直接在每次使用的时候执行一下命令就行：
+
+```bash
+npx git-cz
+```
+
+### ack
+
+```bash
+brew install ack
 ```
