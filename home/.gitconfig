@@ -3,3 +3,5 @@
     name = idwangmo
 [commit]
     template = /home/idwangmo/.gittemplate
+[core]
+	autocrlf = input

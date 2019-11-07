@@ -82,6 +82,7 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'godlygeek/tabular'
 Plug 'mhinz/vim-startify'
+Plug 'kristijanhusak/vim-carbon-now-sh'
 
 call plug#end()
 
@@ -248,5 +249,13 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 " *****************************
 " Open a terminal window
 map <LEADER>sh :set splitbelow<CR>:sp<CR>:term<CR>
-
 nmap <Leader>bn :bNext<CR>
+
+" *****************************
+" carbon setting
+" *****************************
+" let g:carbon_now_sh_browser = 'google-chrome'
+vnoremap <Leader>cr :CarbonNowSh<CR>
+let g:carbon_now_sh_options =
+    \ { 'ln': 'true',
+    \   'fm': 'Iosevka' }

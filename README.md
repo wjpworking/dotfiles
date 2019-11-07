@@ -32,16 +32,23 @@
 ```
 
 2. 解决使用`all-the-icons-font`文件为空的情况：
-    1. 到 [all-the-icons.el](https://github.com/domtronn/all-the-icons.el) 中将项目
-       下载下来
+    1. 到 [all-the-icons.el](https://github.com/domtronn/all-the-icons.el) 中将项目下载下来
     2. 将其`fonts`文件夹下到文件拷贝到`~/.local/share/fonts`文件夹下面
     3. 执行`fc-cache -f -v`刷新字体缓存
 
 ## 工具集
 
--   使用 [exa](https://github.com/ogham/exa) 替换原有的`ls`命令
--   使用 [bat](https://github.com/sharkdp/bat) 替换原有的`cat`命令
--   使用 [lazygit](https://github.com/jesseduffield/lazygit) 和
-    [tips](https://github.com/jonas/tig) 一起替换原有命令行中`git`操作
+-   使用[exa](https://github.com/ogham/exa) 替换原有的`ls`命令
+-   使用[bat](https://github.com/sharkdp/bat) 替换原有的`cat`命令
+-   使用[lazygit](https://github.com/jesseduffield/lazygit) 和[tips](https://github.com/jonas/tig) 一起替换原有命令行中`git`操作
 -   利用[cz-cli](https://github.com/commitizen/cz-cli)来规范`Git`的提交
 -   使用[nvs](https://github.com/jasongin/nvs)来管理`Node.js`的版本
+-   使用[lazygit](https://github.com/jesseduffield/lazygit) 和[tips](https://github.com/jonas/tig) 一起替换原有命令行中`git`操作
+
+## 一些工具的安装
+
+### efm-langserver
+
+```bash
+go get github.com/mattn/efm-langserver
+```

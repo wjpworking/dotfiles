@@ -68,7 +68,10 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx)
+plugins=(git
+    osx
+    docker
+    extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,3 +114,23 @@ export PATH="$PATH:$HOME/.emacs.d/bin"
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# go config
+# Enable the go modules feature
+export GO111MODULE=on
+# Set the GOPROXY environment variable
+export GOPROXY=https://goproxy.io
+# go path
+export PATH="$PATH:$HOME/go/bin"
+
+# jenv config
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# custom config
+[ -f ~/.custom.sh ] && source ~/.custom.sh
+
+# llvm config
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+export SDKROOT="$(xcrun --show-sdk-path)"
