@@ -7,3 +7,4 @@
 # neovim
 home/nvim/autoload/plug.vim
 home/nvim/plugged/
+plug.vim.olg

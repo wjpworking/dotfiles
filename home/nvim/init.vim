@@ -63,7 +63,7 @@ Plug 'rhysd/git-messenger.vim'
 
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'dhruvasagar/vim-table-mode'
+" Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-markdown'
 Plug 'dkarter/bullets.vim'
 
