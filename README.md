@@ -44,7 +44,19 @@
 -   利用 [cz-cli](https://github.com/commitizen/cz-cli) 来规范`Git`的提交
 -   使用 [nvs](https://github.com/jasongin/nvs) 来管理`Node.js`的版本
 -   使用 [lazygit](https://github.com/jesseduffield/lazygit) 和 [tips](https://github.com/jonas/tig) 一起替换原有命令行中`git`操作
--   使用[ack](https://beyondgrep.com/)来进行文件夹下正文搜索，比`grep`友好
+-   使用 [ack](https://beyondgrep.com/) 来进行文件夹下正文搜索，比`grep`友好
+
+## Git 配置
+
+Git 结尾换行符在不同的操作系统的配置：
+
+```bash
+# 在检出的时候转换为 CRLF，在提交的时候转换为 LF，在 windows 上进行配置
+git config --global core.autocrlf true
+
+# 在提交的时候转换为 LF，在检出的时候不转换，在 Linux 和 Mac 上使用此配置
+git config --global core.autocrlf input
+```
 
 ## 一些工具的安装
 
