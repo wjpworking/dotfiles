@@ -39,10 +39,6 @@ Plug 'edkolev/tmuxline.vim'
 " comment
 Plug 'scrooloose/nerdcommenter'
 
-" fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
 " indent
 Plug 'Yggdroot/indentLine'
 

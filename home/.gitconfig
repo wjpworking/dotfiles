@@ -4,6 +4,5 @@
 [commit]
 	template = /Users/idwangmo/.dotfiles/home/.gittemplate
 [core]
-	autocrlf = input
 	ignorecase = false
 	safecrlf = true
