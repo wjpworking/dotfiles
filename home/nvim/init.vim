@@ -126,6 +126,7 @@ set list                          " Show non-printabe characters.
 set smartcase                     " auto cast case
 let mapleader="\<Space>"          " leader key
 color onedark                     " neovim color theme setting
+set clipboard+=unnamedplus
 
 " mac backsoace setting
 if has('mac')
