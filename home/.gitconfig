@@ -1,9 +1,10 @@
 [user]
-    email = idwangmo@protonmail.com
-    name = idwangmo
+	email = idwangmo@protonmail.com
+	name = idwangmo
 [commit]
 	template = /Users/idwangmo/.dotfiles/home/.gittemplate
 [core]
 	autocrlf = input
 	ignorecase = false
 	safecrlf = true
+	editor = nvim
