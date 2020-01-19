@@ -108,7 +108,7 @@ alias ls="exa"
 alias anniex="annie -x http://127.0.0.1:7890"
 alias merge-video="rename ' ' '' * | find * | xargs -i echo file {} > temp.txt | ffmpeg -safe 0 -f concat -i temp.txt -c copy output.mp4; rm temp.txt"
 
-# local config
+# local sofware bin
 export PATH="$PATH:$HOME/.local/bin"
 
 # emacs config
@@ -133,5 +133,9 @@ export GOPROXY=https://goproxy.io
 # cargo config
 export PATH=$PATH:$HOME/.cargo/bin
 
+# nvs config
 export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
+
+# custom config
+[ -f ~/.custom.sh ] && source ~/.custom.sh
