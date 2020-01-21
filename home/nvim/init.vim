@@ -27,9 +27,6 @@ call plug#begin('~/.config/nvim/plugged')
 " align
 Plug 'junegunn/vim-easy-align'
 
-" synatx lint
-" Plug 'w0rp/ale'
-
 " theme
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -136,33 +133,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='onedark'
 
 " *****************************
-" ale config
-" *****************************
-" let g:ale_linters =  {'javascript': ['eslint']}
-" let g:ale_fixers = {
-" \   'javascript': ['eslint'],
-" \}
-
-" let g:ale_fix_on_save = 1
-" let g:ale_completion_enabled = 1
-" let g:ale_sign_column_always = 1
-" let g:airline#extensions#ale#enabled = 1
-
-" " symbols
-" let g:ale_sign_error='E'
-" let g:ale_sign_warning='W'
-" let g:ale_sign_info='I'
-
-" let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-
-" " git info
-" let g:airline#extensions#branch#enabled = 1
-
-" " keymap
-" nmap <silent> <Leader>ap <Plug>(ale_previous_wrap)
-" nmap <silent> <Leader>an <Plug>(ale_next_wrap)
-
-" *****************************
 " easy align config
 " *****************************
 noremap <Leader>ea :EasyAlign<CR>
@@ -211,11 +181,6 @@ nmap <Leader>gm <Plug>(git-messenger)
 nmap <Leader>mp <Plug>MarkdownPreview
 nmap <Leader>md <Plug>MarkdownPreviewStop<CR>
 let g:markdown_fenced_languages = ['css', 'js=javascript']
-
-" *****************************
-" vim witch key config
-" *****************************
-" nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " *****************************
 " pangu config
