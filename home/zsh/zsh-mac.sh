@@ -100,6 +100,7 @@ alias sourcezsh="source ~/.zshrc"
 alias anniex="annie -x http://127.0.0.1:7890"
 alias ls="exa"
 alias nvimconfig="nvim ~/.dotfiles/home/nvim/init.vim"
+alias you-getx="you-get -x http://127.0.0.1:7890"
 
 # homebrew config
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
@@ -131,3 +132,21 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
 export SDKROOT="$(xcrun --show-sdk-path)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/idwangmo/.miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/idwangmo/.miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/idwangmo/.miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/idwangmo/.miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# cargo config
+export PATH="$HOME/.cargo/bin:$PATH"

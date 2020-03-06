@@ -8,3 +8,4 @@
 home/nvim/autoload/plug.vim
 home/nvim/plugged/
 plug.vim.old
+home/nvim/pack/
