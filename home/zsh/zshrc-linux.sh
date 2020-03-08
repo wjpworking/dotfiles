@@ -124,6 +124,7 @@ export PATH="$PATH:$HOME/.cargo/bin"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # go config
+export PATH="$PATH:$HOME/.local/share/umake/go/go-lang/bin"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
