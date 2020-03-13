@@ -79,3 +79,9 @@ npx git-cz
 ```bash
 brew install ack
 ```
+
+### zoxide
+
+```bash
+cargo install zoxide -f
+```

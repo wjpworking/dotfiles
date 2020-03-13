@@ -150,3 +150,8 @@ unset __conda_setup
 
 # cargo config
 export PATH="$HOME/.cargo/bin:$PATH"
+export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+
+# zoxide config
+eval "$(zoxide init zsh)"
+
