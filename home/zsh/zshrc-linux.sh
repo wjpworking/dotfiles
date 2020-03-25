@@ -138,5 +138,8 @@ export PATH=$PATH:$HOME/.cargo/bin
 export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
 
+# bash tldr config
+complete -W "$(tldr 2>/dev/null --list)" tldr
+
 # custom config
 [ -f ~/.custom.sh ] && source ~/.custom.sh
