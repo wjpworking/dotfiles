@@ -85,3 +85,9 @@ brew install ack
 ```bash
 cargo install zoxide -f
 ```
+
+# 其他
+
+## 工具
+
+1. 参考[weibo-crawler](https://github.com/dataabc/weibo-crawler)改写了一个爬虫用于只爬取微博的图片
