@@ -88,6 +88,10 @@ cargo install zoxide -f
 
 # 其他
 
+## zsh 插件
+
+1. [fzf-tab](https://github.com/Aloxaf/fzf-tab)
+
 ## 工具
 
 1. 参考[weibo-crawler](https://github.com/dataabc/weibo-crawler)改写了一个爬虫用于只爬取微博的图片

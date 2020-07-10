@@ -68,7 +68,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker)
+plugins=(git docker fzf-tab)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,3 +97,5 @@ export ARCHFLAGS="-arch x86_64"
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
+
+export PATH=$PATH:$HOME/.local/bin
