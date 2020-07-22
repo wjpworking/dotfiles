@@ -97,5 +97,13 @@ export ARCHFLAGS="-arch x86_64"
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias sourcezsh="source ~/.zshrc"
 
+# other settings
 export PATH=$PATH:$HOME/.local/bin
+
+# go settings
+export PATH=$PATH:/usr/lib/go-1.14/bin
+
+# rust settings
+export PATH=$PATH:$HOME/.cargo/bin
