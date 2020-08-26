@@ -1,9 +1,5 @@
 {
     "languageserver": {
-        "efm": {
-            "command": "efm-langserver",
-            "filetypes": ["vim", "eruby", "markdown", "yaml"]
-        },
         "bash": {
             "command": "bash-language-server",
             "args": ["start"],

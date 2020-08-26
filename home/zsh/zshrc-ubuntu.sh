@@ -104,6 +104,7 @@ export PATH=$PATH:$HOME/.local/bin
 
 # go settings
 export PATH=$PATH:/usr/lib/go-1.14/bin
+export PATH=$PATH:$HOME/go/bin
 
 # rust settings
 export PATH=$PATH:$HOME/.cargo/bin

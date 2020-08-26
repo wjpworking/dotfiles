@@ -5,7 +5,7 @@
 .DS_Store
 
 # neovim
-home/nvim/autoload/plug.vim
-home/nvim/plugged/
+home/.config/nvim/autoload/plug.vim
+home/.config/nvim/plugged/
 plug.vim.old
-home/nvim/pack/
+home/.config/nvim/pack/

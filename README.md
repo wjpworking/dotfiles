@@ -12,6 +12,8 @@
 
 这个配置使用了 [LSP](https://github.com/Microsoft/language-server-protocol/) 作为补全后端，不再使用以前我用的 [YCM](https://valloric.github.io/YouCompleteMe/) 做为补全后端，并重写了一些配置。
 
+使用 Neovim 替代 Vim。使用[coc.nvim](https://github.com/neoclide/coc.nvim)作为默认的 LSP 实现。
+
 ## 字体
 
 现在因为是中英文一起进行开发，所以使用 [更纱黑体](https://github.com/be5invis/Sarasa-Gothic) 作为日常开发使用的字体。
@@ -31,7 +33,7 @@
   (set-charset-priority 'unicode))
 ```
 
-2. 解决使用`all-the-icons-font`文件为空的情况：
+2.  解决使用`all-the-icons-font`文件为空的情况：
     1. 到 [all-the-icons.el](https://github.com/domtronn/all-the-icons.el) 中将项目下载下来
     2. 将其`fonts`文件夹下到文件拷贝到`~/.local/share/fonts`文件夹下面
     3. 执行`fc-cache -f -v`刷新字体缓存
@@ -86,12 +88,12 @@ brew install ack
 cargo install zoxide -f
 ```
 
-# 其他
+## 其他
 
-## zsh 插件
+### zsh 插件
 
 1. [fzf-tab](https://github.com/Aloxaf/fzf-tab)
 
-## 工具
+### 工具
 
 1. 参考[weibo-crawler](https://github.com/dataabc/weibo-crawler)改写了一个爬虫用于只爬取微博的图片

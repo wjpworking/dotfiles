@@ -235,7 +235,7 @@ autocmd BufWritePre text,*.wiki,*.cnx call PanGuSpacing()
 " *****************************
 " coc config
 " *****************************
-let g:coc_global_extensions = ['coc-python', 'coc-dictionary']
+let g:coc_global_extensions = ['coc-python', 'coc-dictionary', 'coc-markdownlint']
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
