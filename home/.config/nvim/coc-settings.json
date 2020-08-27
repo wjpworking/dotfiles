@@ -21,5 +21,10 @@
                 }
             }
         }
+    },
+    "markdownlint.config": {
+        "default": true,
+        "line_length": false,
+        "ol": false
     }
 }
