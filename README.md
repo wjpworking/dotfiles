@@ -97,3 +97,8 @@ cargo install zoxide -f
 ### 工具
 
 1. 参考[weibo-crawler](https://github.com/dataabc/weibo-crawler)改写了一个爬虫用于只爬取微博的图片
+
+### FAQ
+
+1. 出现`Cannot find the fakeroot binary.`的错误
+    这是因为系统中缺少基础的开发环境，执行命令`sudo pacman -S base-devel`可以解决

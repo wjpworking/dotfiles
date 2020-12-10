@@ -1,8 +1,6 @@
 [user]
 	email = idwangmo@protonmail.com
 	name = idwangmo
-[commit]
-	template = /Users/idwangmo/.dotfiles/home/.gittemplate
 [core]
 	ignorecase = false
 	safecrlf = true
