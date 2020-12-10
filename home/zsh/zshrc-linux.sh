@@ -86,9 +86,9 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
-  export EDITOR='mvim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -98,14 +98,9 @@ export ARCHFLAGS="-arch x86_64"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 #
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias sourcezsh="source ~/.zshrc"
-alias nvimconfig='nvim ~/.config/nvim/init.vim'
-alias dotfiles='nvim ~/.dotfiles'
-alias ls="exa"
-alias anniex="annie -x http://127.0.0.1:7890"
-alias merge-video="rename ' ' '' * | find * | xargs -i echo file {} > temp.txt | ffmpeg -safe 0 -f concat -i temp.txt -c copy output.mp4; rm temp.txt"
+DOTFILE=$HOME/.dotfiles
+keymap_file=$DOTFILE/home/zsh/keymap.sh
+[ -f $keymap_file ] && source $keymap_file
 
 # local sofware bin
 export PATH="$PATH:$HOME/.local/bin"
@@ -131,9 +126,6 @@ export GOPROXY=https://goproxy.io
 
 # cargo config
 export PATH=$PATH:$HOME/.cargo/bin
-
-# bash tldr config
-complete -W "$(tldr 2>/dev/null --list)" tldr
 
 # custom config
 [ -f ~/.custom.sh ] && source ~/.custom.sh
