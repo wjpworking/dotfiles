@@ -72,6 +72,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'edkolev/tmuxline.vim'
+Plug 'joshdick/onedark.vim'
 
 " comment
 Plug 'scrooloose/nerdcommenter'
@@ -115,9 +116,7 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'godlygeek/tabular'
 Plug 'mhinz/vim-startify'
-Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'tpope/vim-surround'
-Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
@@ -257,11 +256,3 @@ map <LEADER>sh :set splitbelow<CR>:sp<CR>:term<CR>
 nmap <Leader>bn :bNext<CR>
 let g:onedark_terminal_italics = 1
 
-" *****************************
-" carbon setting
-" *****************************
-" let g:carbon_now_sh_browser = 'google-chrome'
-vnoremap <Leader>cr :CarbonNowSh<CR>
-let g:carbon_now_sh_options =
-    \ { 'ln': 'true',
-    \   'fm': 'Iosevka' }
