@@ -101,4 +101,7 @@ cargo install zoxide -f
 ### FAQ
 
 1. 出现`Cannot find the fakeroot binary.`的错误
+
     这是因为系统中缺少基础的开发环境，执行命令`sudo pacman -S base-devel`可以解决
+
+2. 在
