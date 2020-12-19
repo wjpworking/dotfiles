@@ -99,7 +99,7 @@ export ARCHFLAGS="-arch x86_64"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 #
 DOTFILE=$HOME/.dotfiles
-keymap_file=$DOTFILE/home/zsh/keymap.sh
+keymap_file=$DOTFILE/zsh/keymap.sh
 [ -f $keymap_file ] && source $keymap_file
 
 # local sofware bin
