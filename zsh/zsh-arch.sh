@@ -85,19 +85,16 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='nvim'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='nvim'
+# else
+#   export EDITOR='nvim'
+# fi
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-#
+# personal aliases
 DOTFILE=$HOME/.dotfiles
 keymap_file=$DOTFILE/zsh/keymap.sh
 [ -f $keymap_file ] && source $keymap_file
@@ -123,9 +120,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # golangx proxy
 export GOPROXY=https://goproxy.io
-
-# cargo config
-export PATH=$PATH:$HOME/.cargo/bin
 
 # custom config
 [ -f ~/.custom.sh ] && source ~/.custom.sh
