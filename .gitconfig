@@ -5,3 +5,5 @@
 	ignorecase = false
 	safecrlf = true
 	editor = nvim
+[pull]
+	rebase = true
