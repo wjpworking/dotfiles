@@ -9,3 +9,4 @@ alias ls="exa"
 alias vim="nvim"
 alias anniex="annie -x http://127.0.0.1:7890"
 alias merge-video="rename ' ' '' * | find * | xargs -i echo file {} > temp.txt | ffmpeg -safe 0 -f concat -i temp.txt -c copy output.mp4; rm temp.txt"
+
