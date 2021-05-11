@@ -68,7 +68,9 @@ ZSH_THEME="ys"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker fzf-tab ubuntu)
+plugins=(git
+	fzf-tab
+	ubuntu)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,22 +91,13 @@ export LANG=en_US.UTF-8
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias sourcezsh="source ~/.zshrc"
+# custom config
+[ -f ~/.custom.sh ] && source ~/.custom.sh
 
-# other settings
-export PATH=$PATH:$HOME/.local/bin
+# personal aliases
+DOTFILE=$HOME/.dotfiles
+keymap_file=$DOTFILE/zsh/keymap.sh
+[ -f $keymap_file ] && source $keymap_file
 
-# go settings
-export PATH=$PATH:/usr/lib/go-1.14/bin
-export PATH=$PATH:$HOME/go/bin
-
-# rust settings
-export PATH=$PATH:$HOME/.cargo/bin
+# common config
+[ -f $HOME/.dotfiles/zsh/common.sh ] && source $HOME/.dotfiles/zsh/common.sh
