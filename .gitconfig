@@ -2,8 +2,4 @@
 	email = idwangmo@protonmail.com
 	name = idwangmo
 [core]
-	ignorecase = false
-	safecrlf = true
 	editor = nvim
-[pull]
-	rebase = true

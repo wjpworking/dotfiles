@@ -89,43 +89,16 @@ export LANG=en_US.UTF-8
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias sourcezsh="source ~/.zshrc"
-alias nvimconfig="nvim ~/.config/nvim/init.vim"
-alias anniex="annie -x http://127.0.0.1:7890"
-alias ls="exa"
-alias you-getx="you-get -x http://127.0.0.1:7890"
-
 # homebrew config
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 export PATH="/usr/local/sbin:$PATH"
 
-# doom emacs config
-export PATH="$PATH:$HOME/.emacs.d/bin"
-
-# fzf config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# go config
-# Enable the go modules feature
-export GO111MODULE=on
-# Set the GOPROXY environment variable
-export GOPROXY=https://goproxy.io
-# go path
-export PATH="$PATH:$HOME/go/bin"
+# personal aliases
+[ -f $HOME/.dotfiles/zsh/keymap.sh ] && source $HOME/.dotfiles/zsh/keymap.sh
 
 # custom config
 [ -f ~/.custom.sh ] && source ~/.custom.sh
 
-# cargo config
-export PATH="$HOME/.cargo/bin:$PATH"
-export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+# common config
+[ -f $HOME/.dotfiles/zsh/common.sh ] && source $HOME/.dotfiles/zsh/common.sh
 
-# zoxide config
-eval "$(zoxide init zsh)"

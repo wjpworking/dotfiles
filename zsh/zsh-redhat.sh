@@ -91,9 +91,8 @@ export LANG=en_US.UTF-8
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-DOTFILE=$HOME/.dotfiles
-keymap_file=$DOTFILE/zsh/keymap.sh
-[ -f $keymap_file ] && source $keymap_file
+# personal aliases
+[ -f $HOME/.dotfiles/zsh/keymap.sh ] && source $HOME/.dotfiles/zsh/keymap.sh
 
 # custom config
 [ -f ~/.custom.sh ] && source ~/.custom.sh
